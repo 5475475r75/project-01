@@ -6,21 +6,21 @@ class Country extends Component {
         super(props);
         
         this.state = {
-            CityName : 'Surat'
+            CountryName : 'India'
         }
     }
     
-    ChangeCity = () => {
+    ChangeCountry = () => {
         this.setState({
-            CityName : 'Mumbai'
+            CountryName : 'US'
         });
     }
 
     render() {
         return (
              <div>
-                <p>{this.state.CityName}</p>
-                <button onClick={() => this.ChangeCity()}>ChangeCity</button>
+                <p>{this.state.CountryName}</p>
+                <button onClick={() => this.ChangeCountry()}>ChangeCountry</button>
             </div>
         );
     }

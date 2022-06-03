@@ -2,16 +2,16 @@ import React from 'react';
 
 function CountryFun(props) {
 
-    const[CityName, setCityName] = useState('Surat...');
+    const[CountryName, setCountryName] = useState('India');
 
-    const ChangeCity = () => {
-        setCityName('Mumbai...');
+    const ChangeCountry = () => {
+        setCountryName('USA');
     }
 
     return (
         <div>
-                <p>{CityName}</p>
-                <button onClick={() => ChangeCity()}>ChangeCity</button>
+                <p>{CountryName}</p>
+                <button onClick={() => ChangeCountry()}>ChangeCountry</button>
         </div>
     );
 }
