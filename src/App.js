@@ -4,28 +4,28 @@ import Demo from './Component/Demp';
 
 function App() {
 
-  const person = {
-    name: "Amit",
-    age: 25
-  }
-
-  console.log(person.name, person.age);
-
-
-
-  // const person = [
-  //   {
+  // const person = {
   //     name: "Amit",
-  //     age: 25,
-  //   },
-  //   {
-  //     name: "Piyush",
-  //     age: 40,
-  //   },
+  //     age: 25
+  // }
 
-  // ];
+  //   console.log(person.name, person.age);
 
-  // person.map((p) => console.log(p.name, p.age));
+
+
+  const person = [
+    {
+      name: "Amit",
+      age: 25,
+    },
+    {
+      name: "Piyush",
+      age: 40,
+    },
+
+  ];
+
+  person.map((p) => console.log(p.name, p.age));
 
 
   //   const person = {
@@ -85,6 +85,7 @@ function App() {
   //     console.log(myObj[k]);
   //   }
   // }
+
 
   return (
     < Demo />
