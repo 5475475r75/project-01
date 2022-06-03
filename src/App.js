@@ -4,33 +4,87 @@ import Demo from './Component/Demp';
 
 function App() {
 
-  const person = [
+  let data = [
     {
-      name: "Amit",
-      age: 25,
-      course: [
-        "C",
-        "HTML"
-      ]
+      id: 101,
+      name: 'Abacavir',
+      quantity: 25,
+      price: 150,
+      expiry: 2022,
+      status: true
     },
     {
-      name: "Ajay",
-      age: 40,
-      course: [
-        "Java",
-        "JavaScript"
-      ]
+      id: 102,
+      name: 'Eltrombopag',
+      quantity: 90,
+      price: 550,
+      expiry: 2021,
+      status: true
+    },
+    {
+      id: 103,
+      name: 'Meloxicam',
+      quantity: 85,
+      price: 450,
+      expiry: 2025,
+      status: false
+    },
+    {
+      id: 104,
+      name: 'Allopurinol',
+      quantity: 50,
+      price: 600,
+      expiry: 2023,
+      status: true
+    },
+    {
+      id: 105,
+      name: 'Phenytoin',
+      quantity: 63,
+      price: 250,
+      expiry: 2021,
+      status: false
     }
-  ]
+  ];
 
-  person.map((p) => {
-    console.log(person.name, person.age);
-    person.course.map((p) => console.log(p));
-  })
+  let fdata = data.filter((d, i) => d.status === true && d.expiry >= 2022);
+
+  let ans = fdata.reduce((acc, d, i) => acc + d.price, 0);
+
+  console.log(fdata);
+  console.log(ans);
 
 
   return (
-    < Demo />
+    <div>
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Expiry</th>
+          <th>Status</th>
+          <th>Total Price</th>
+        </tr>
+        {
+          fdata.map((d,i) => {
+            let {id, name, quantity, price, expiry, status} = d;
+            return(
+              <tr key={i}>
+                <td>{id}</td>
+                <td>{name}</td>
+                <td>{quantity}</td>
+                <td>{price}</td>
+                <td>{expiry}</td>
+                <td>{status.toString()}</td>
+                {i === 0 ? <td rowSpan={2}>{ans}</td> : null}
+              </tr>
+            )
+          })
+        }
+      </table>
+    </div>
   );
 }
 
