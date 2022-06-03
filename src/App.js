@@ -13,32 +13,32 @@ function App() {
 
 
 
-  const person = [
-    {
-      name: "Amit",
-      age: 25,
-    },
-    {
-      name: "Piyush",
-      age: 40,
-    },
-
-  ];
-
-  person.map((p) => console.log(p.name, p.age));
-
-
-  //   const person = {
+  // const person = [
+  //   {
   //     name: "Amit",
   //     age: 25,
-  //     course: [
-  //         "C",
-  //         "HTML"
-  //     ]
-  // }
+  //   },
+  //   {
+  //     name: "Piyush",
+  //     age: 40,
+  //   },
 
-  //   console.log(person.name, person.age);
-  //   person.course.map((p) => console.log(p));
+  // ];
+
+  // person.map((p) => console.log(p.name, p.age));
+
+
+  const person = {
+    name: "Amit",
+    age: 25,
+    course: [
+      "C",
+      "HTML"
+    ]
+  }
+
+  console.log(person.name, person.age);
+  person.course.map((p) => console.log(p));
 
 
   // const person = [
