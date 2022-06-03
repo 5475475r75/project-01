@@ -11,7 +11,7 @@ function CountryFun(props) {
     return (
         <div>
                 <p>{CountryName}</p>
-                <button onClick={() => ChangeCountry()}>ChangeCountry</button>
+                <button onClick={() => ChangeCountry()}>Change Country</button>
         </div>
     );
 }
