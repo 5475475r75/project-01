@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import Demo from './Component/Demp';
+import Country from './Containers/country';
+import CountryFun from './Containers/countryfun';
+
 
 function App() {
 
+
+  
   let data =  [
     {
       name: "amit",
@@ -52,6 +57,8 @@ function App() {
 
   return (
     <div>
+      < Country/>
+      < CountryFun/>
     <table border="1">
       <tr>
         <th>Name</th>
