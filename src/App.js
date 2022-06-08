@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Counter from './Containers/Counter';
 import Country from './Containers/Country';
 import CountryFun from './Containers/CountryFun';
 import Timeco from './Containers/time/Timeco';
@@ -8,8 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Timefun />
-        <Timeco />
+        <Counter />
       </div>
     );
   }
