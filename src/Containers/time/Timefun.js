@@ -6,24 +6,24 @@ class Timefun extends Component {
         super(props);
 
         this.state = {
-            time = New Date()
+            time : new Date()
         }
     }
 
     tick = () => {
         this.setState ({
-            time = New Date()
+            time : new Date()
         })
     }
 
     componentDidMount = () => {
         this.timeI = setInterval(() =>
-            this.timeI() ,1000);
+            this.tick() ,1000);
     } 
 
     componentDidUpdate = (prevprops,prevstate) => {
         if(this.state.time !== prevstate.time){
-            console.log("time");
+            console.log("componentDidUpdate");
         }
     }
 
@@ -34,7 +34,7 @@ class Timefun extends Component {
     render() {
         return (
             <div>
-                <p>{this.state.time.tolocateTimeString()}</p>
+                <p>{this.state.time.toLocaleTimeString()}</p>
             </div>
         );
     }

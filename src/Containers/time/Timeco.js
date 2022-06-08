@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 function Timeco(props) {
 
-    const [Time,SetTime] = useState(
-        New Date());
+    const [time,setTime] = useState(
+        new Date());
 
     const tick = () => {
-        SetTime(New Date());
+        setTime(new Date());
     }    
 
         useEffect (() => {  
@@ -15,12 +15,12 @@ function Timeco(props) {
         return () => {
             clearInterval(timeI);
         }
-    },[Time]);
+    },[time]);
 
     
     return (
         <div>
-            <p>{time.tolocateTimeString}</p>
+            <p>{time.toLocaleTimeString()}</p>
         </div>
     );
 }

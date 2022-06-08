@@ -8,10 +8,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Country />
-        <CountryFun /> */}
         <Timefun />
-        <Timeco />
+        {/* <Timeco /> */}
       </div>
     );
   }
