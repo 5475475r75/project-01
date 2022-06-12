@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Home from './Container/Home';
-import Loading from './Container/Loading';
+import Home from './Containers/Home';
+import Loading from './Containers/Loading';
 
 
 
