@@ -1,18 +1,47 @@
-import React, { Component } from 'react';
-import Country from './Containers/Country';
-import CountryFun from './Containers/CountryFun';
-import Timeco from './Containers/time/Timeco';
-import Timefun from './Containers/time/Timefun';
+import React, { useEffect, useState } from 'react';
+import Home from './Container/Home';
+import Loading from './Container/Loading';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Timefun />
-        <Timeco />
-      </div>
-    );
-  }
+
+
+const Homewithloading = Loading(Home)
+
+function App(props){
+  
+  const [ loading , setLoading ] = useState (false);
+
+  const [ data , setData ] = useState ([]);
+
+  let orgdata=[
+    {
+      id:101,
+      name:'Brijesh'
+    }
+    ,
+    {
+      id:102,
+      name:'Roshni'
+    }
+    ,
+    {
+      id:103,
+      name:'Kartik'
+    }
+  ]
+
+  useEffect(()=>{
+    setLoading(true);
+    setTimeout(()=>{setLoading(false);setData(orgdata)},1000)
+  },[])
+
+  return (
+   
+      <Homewithloading
+        isloading={loading}
+        data={data}
+      />
+    
+  );
 }
 
 export default App;
