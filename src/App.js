@@ -31,7 +31,7 @@ function App(props){
 
   useEffect(()=>{
     setLoading(true);
-    setTimeout(()=>{setLoading(false);setData(orgdata)},1000)
+    setTimeout(()=>{setLoading(false);setData(orgdata)},3000)
   },[])
 
   return (
